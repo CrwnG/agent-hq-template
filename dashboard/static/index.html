@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HQ // Command Deck</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="crt"></div>
+
+<header class="topbar" id="topbar">
+  <div class="brand">&#9650; <span id="brand-name">HQ</span><span class="dim">//</span>COMMAND DECK</div>
+  <div class="stat"><span class="lbl">CREW ACTIVE</span><span class="val" id="working-count">0/0</span></div>
+  <div class="stat"><span class="lbl">WAITING ON YOU</span><span class="val" id="pending-count">0</span></div>
+  <div class="plugin-slot" id="plugin-topbar"></div>
+  <div class="stat clock"><span class="lbl" id="link-state">LINK</span><span class="val" id="clock">--:--:--</span></div>
+</header>
+
+<section id="plugin-banner"></section>
+
+<main class="deck">
+  <aside class="panel roster">
+    <h2>CREW ROSTER</h2>
+    <ul id="roster"></ul>
+  </aside>
+
+  <section class="station-wrap">
+    <canvas id="station" width="640" height="360" aria-label="Station map. Click a room for agent details."></canvas>
+    <div class="station-hint">CLICK A ROOM TO INSPECT</div>
+    <aside class="agent-panel hidden" id="agent-panel">
+      <button class="close" id="agent-close" aria-label="Close">&times;</button>
+      <div id="agent-detail"></div>
+    </aside>
+  </section>
+
+  <aside class="panel log">
+    <h2>EVENT LOG</h2>
+    <ol id="events"></ol>
+  </aside>
+</main>
+
+<section class="bottom">
+  <div class="pipeline" id="pipeline"></div>
+  <div class="panel approvals">
+    <h2>APPROVAL QUEUE <span class="badge" id="approval-count">0</span>
+      <span class="dim small">items the crew needs your yes on; nothing ships without it</span></h2>
+    <div class="approval-list" id="approvals"></div>
+  </div>
+</section>
+
+<script src="/static/sprites.js"></script>
+<script src="/static/station.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

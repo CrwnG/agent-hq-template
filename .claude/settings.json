@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/Scripts/python.exe -m hq.report *)",
+      "Bash(.venv/Scripts/python.exe -m hq.query *)",
+      "Bash(.venv/Scripts/python.exe -m pytest*)",
+      "PowerShell(.venv\\Scripts\\python.exe -m hq.report *)",
+      "PowerShell(.venv\\Scripts\\python.exe -m hq.query *)",
+      "PowerShell(.venv\\Scripts\\python.exe -m pytest*)"
+    ],
+    "deny": [
+      "Read(./.env)"
+    ]
+  }
+}

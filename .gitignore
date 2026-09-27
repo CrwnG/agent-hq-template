@@ -1,0 +1,39 @@
+# secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# HQ state (live data, never committed)
+hq/state.db
+hq/state.db-*
+*.db-wal
+*.db-shm
+
+# generated work, logs, models
+output/*
+!output/.gitkeep
+models/
+*.safetensors
+*.ckpt
+
+# python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# local tool settings
+.claude/settings.local.json
+
+# throwaway agent scratch scripts (e.g. dump_tmp.py)
+*_tmp.py
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

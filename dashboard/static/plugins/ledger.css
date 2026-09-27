@@ -1,0 +1,43 @@
+/* Ledger plugin — same green-terminal tokens as style.css */
+.goals.hidden { display: none; }
+.money-btn { border-color: var(--fg); color: var(--bright); letter-spacing: 2px; }
+
+.modal {
+  position: fixed; inset: 0; z-index: 40; background: rgba(0, 0, 0, .72);
+  display: flex; align-items: flex-start; justify-content: center; padding: 4vh 14px; overflow: auto;
+}
+.modal.hidden { display: none; }
+.modal-box { position: relative; width: min(1100px, 100%); padding: 14px 16px 18px; background: rgba(2, 14, 6, .97); }
+.modal-box .close { position: absolute; top: 8px; right: 8px; padding: 0 8px; font-size: 16px; }
+.modal-box h2 { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; padding-right: 40px; }
+.modal-box h3 { margin: 12px 0 6px; font-size: 11px; letter-spacing: 2px; color: var(--fg-dim); font-weight: normal; }
+.money-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px; }
+
+.modal-box input, .modal-box select {
+  font: inherit; font-size: 12px; background: #010601; color: var(--fg); border: 1px solid var(--line);
+  padding: 3px 5px; width: 100%; text-shadow: none; color-scheme: dark;
+}
+.modal-box h2 input { width: auto; margin-left: 6px; }
+.modal-box select:focus-visible { outline: 1px solid var(--bright); outline-offset: 1px; }
+#money-form { display: flex; flex-direction: column; gap: 6px; }
+#money-form label { display: flex; flex-direction: column; gap: 2px; font-size: 10px; letter-spacing: 1px; color: var(--fg-dim); flex: 1; }
+#money-form .frow { display: flex; gap: 8px; align-items: flex-end; flex-wrap: wrap; }
+#money-form .hint { font-size: 10px; flex: 1; min-width: 160px; }
+#money-form .err, #money-form .ok { min-height: 1.2em; font-size: 12px; }
+
+.tbl-wrap { overflow-x: auto; }
+.mtable { width: 100%; border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+.mtable th, .mtable td { padding: 2px 6px; border-bottom: 1px dotted rgba(28, 90, 44, .6); text-align: right; white-space: nowrap; }
+.mtable th { color: var(--fg-dim); font-weight: normal; font-size: 10px; letter-spacing: 1px; }
+.mtable th:first-child, .mtable td:first-child { text-align: left; }
+.mtable td.txt { text-align: left; white-space: normal; max-width: 360px; word-break: break-word; color: var(--fg-dim); }
+.mtable tr.sub td:first-child { padding-left: 18px; color: var(--fg-dim); }
+.mtable tr.total td { color: var(--bright); border-top: 1px solid var(--fg-dim); }
+.mtable .neg { color: var(--red); }
+.mtable .pos { color: var(--bright); }
+.money-goal { margin-top: 8px; font-size: 11px; }
+.money-goal .bar { margin: 3px 0 6px; }
+
+@media (max-width: 900px) {
+  .money-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,6 @@
+[
+  {"id": "architect",  "name": "ARCHITECT",  "role": "Lead: plans, dispatches, reviews, approves", "room": "bridge"},
+  {"id": "critic",     "name": "CRITIC",     "role": "Quality gate: hard fails + score",           "room": "qa_lab"},
+  {"id": "researcher", "name": "RESEARCHER", "role": "Finds evidence, writes briefs",               "room": "observatory"},
+  {"id": "builder",    "name": "BUILDER",    "role": "Makes the work from the queue",               "room": "workshop"}
+]
